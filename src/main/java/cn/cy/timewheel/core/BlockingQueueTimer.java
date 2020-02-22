@@ -19,7 +19,7 @@ public class BlockingQueueTimer implements TickTimer {
 	private long interval;
 
 	// 使用阻塞队列来模拟
-	private BlockingQueue blockingQueue;
+	private BlockingQueue<?> blockingQueue;
 
 	public BlockingQueueTimer(long interval) {
 
@@ -28,7 +28,7 @@ public class BlockingQueueTimer implements TickTimer {
 		}
 
 		this.interval = interval;
-		blockingQueue = new LinkedBlockingQueue();
+		blockingQueue = new LinkedBlockingQueue<>();
 	}
 
 	@Override

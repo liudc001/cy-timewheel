@@ -198,7 +198,7 @@ public class TimeWheel {
             this.index = index;
         }
 
-        @SuppressWarnings("unchecked")
+        @SuppressWarnings({ "unchecked", "rawtypes" })
         public static Slot buildEmptySlot(int index) {
             return new Slot(0, new HashMap<>(), index);
         }
